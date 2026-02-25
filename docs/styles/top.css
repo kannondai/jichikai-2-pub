@@ -1,0 +1,323 @@
+body {
+  font-family: sans-serif;
+  margin: 2em;
+  background: #f9f9f9;
+}
+header, footer, main {
+  max-width: 800px; /* 横幅を揃える */
+  margin: 0 auto; /* 中央揃え */
+  padding: 1em;
+  border-radius: 8px; /* 一貫性のために角を丸める */
+}
+header, footer {
+  background: #2c3e50;
+  color: #fff;
+}
+main {
+  background: #fff;
+  box-shadow: 0 2px 8px #ccc;
+}
+nav {
+  margin: 1.5em auto; /* 上下の余白を設定し、中央揃え */
+  max-width: 800px; /* 横幅を制限 */
+  text-align: center; /* ナビゲーションリンクを中央揃え */
+}
+nav a {
+  display: inline-block; /* 横に並べる */
+  margin: 0 0.3em; /* 左右の余白を減らす */
+  white-space: nowrap; /* テキストの折り返しを防ぐ */
+  color: #2980b9;
+  text-decoration: none;
+}
+section {
+  margin-bottom: 2em;
+}
+.highlight {
+  background: none; /* 背景色を削除 */
+  padding: 1em;
+  border-radius: 6px; /* 角丸はそのまま維持 */
+}
+.two-column {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  align-items: flex-start; /* 子要素の高さを揃えない */
+}
+.column {
+  flex: 1 1 250px; /* 最小幅を250pxに設定 */
+  background: #f4f8fb;
+  padding: 1em;
+  border-radius: 6px;
+  margin: 0; /* 不要なマージンを削除 */
+}
+.column ul {
+  margin: 0; /* リストの余計なマージンを削除 */
+  padding: 0; /* リストの余計なパディングを削除 */
+  list-style-position: inside; /* リストマーカーを内側に配置 */
+}
+.column li {
+  margin-bottom: 0.5em; /* リスト項目間の余白を調整 */
+}
+.hero-img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto 1.5em auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #bbb;
+}
+.caption {
+  text-align: center;
+  color: #555;
+  font-size: 0.95em;
+  margin-bottom: 2em;
+}
+.image-gallery {
+  display: flex; /* 横並びにする */
+  justify-content: center; /* 中央揃え */
+  gap: 1em; /* 画像間の余白 */
+  flex-wrap: wrap; /* 画面幅が狭い場合に折り返す */
+}
+
+.image-gallery figure {
+  text-align: center; /* キャプションを中央揃え */
+  margin: 0;
+  flex: 1 1 calc(33.333% - 1em); /* 各画像を均等に配置 */
+  max-width: 300px; /* 各画像の最大幅を設定 */
+}
+
+.image-gallery img {
+  width: 100%; /* 画像を親要素の幅に合わせる */
+  height: auto; /* アスペクト比を維持 */
+  border-radius: 8px; /* 画像の角を丸める */
+}
+
+.image-gallery figcaption {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 0.5em;
+}
+#hall .two-column {
+  display: flex;
+  gap: 1em; /* 左右の余白 */
+  flex-wrap: nowrap; /* 折り返しを防ぐ */
+  align-items: flex-start; /* 子要素を上揃え */
+}
+
+#hall .column.description {
+  flex: 2; /* 左側を3分の2の幅に設定 */
+}
+
+#hall .column.image {
+  flex: 1; /* 右側を3分の1の幅に設定 */
+  display: flex;
+  justify-content: center; /* 画像を中央揃え */
+  align-items: center; /* 画像を縦方向に中央揃え */
+  text-align: center; /* 画像とキャプションを中央揃え */
+  margin: 0; /* 不要なマージンを削除 */
+  padding: 0.0em; /* 必要最小限のパディングを設定 */
+}
+
+#hall .column.image img {
+  width: 100%; /* 親要素の幅に合わせる */
+  max-width: 400px; /* 画像の最大幅を設定 */
+  height: auto; /* アスペクト比を維持 */
+  border-radius: 8px; /* 画像の角を丸める */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* 画像に影を追加 */
+}
+
+/* テーブル全体のスタイル */
+table {
+  width: 100%; /* テーブルを親要素の幅に合わせる */
+  border-collapse: collapse; /* セルの境界線を重ねる */
+  margin-bottom: 2em; /* テーブル間の余白 */
+}
+
+/* セルのスタイル */
+td {
+  padding: 0.5em; /* セル内の余白 */
+  text-align: center; /* コンテンツを中央揃え */
+  vertical-align: middle; /* 縦方向の中央揃え */
+}
+
+/* 画像のスタイル */
+table img {
+  width: 100%; /* 親セルの幅に合わせる */
+  max-width: 300px; /* 画像の最大幅を設定 */
+  height: auto; /* アスペクト比を維持 */
+  border-radius: 8px; /* 画像の角を丸める */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* 画像に影を追加 */
+}
+
+/* 集会所の説明文のスタイル */
+.hall-table td:first-child {
+  text-align: left; /* 説明文を左揃え */
+  font-size: 0.95em; /* フォントサイズを調整 */
+  color: #555; /* テキストの色を調整 */
+}
+
+/* テーブル内の画像とキャプションのスタイル */
+figure {
+  margin: 0;
+  text-align: center; /* キャプションを中央揃え */
+}
+
+figure img {
+  width: 100%; /* 親セルの幅に合わせる */
+  max-width: 300px; /* 画像の最大幅を設定 */
+  height: auto; /* アスペクト比を維持 */
+  border-radius: 8px; /* 画像の角を丸める */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* 画像に影を追加 */
+}
+
+figcaption {
+  margin-top: 0.5em; /* 画像とキャプションの間に余白を追加 */
+  font-size: 0.9em; /* キャプションのフォントサイズを調整 */
+  color: #555; /* キャプションの色を調整 */
+}
+
+.about-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  text-align: left;
+}
+
+.about-table td {
+  text-align: left; /* テーブルセル全体を左寄せ */
+  vertical-align: top; /* 上揃え */
+  padding: 0.5em; /* 余白を狭く設定 */
+  border: 1px solid #ddd;
+  font-size: 0.95em; /* 説明文の文字サイズ */
+  color: #555;
+  line-height: 1.5;
+}
+
+/* about-table の見出しを少し大きめに設定 */
+.about-table h3 {
+  margin-top: 0;
+  font-size: 1.1em; /* 少し大きめの文字サイズ */
+  color: #2980b9; /* 見出しの色 */
+  font-weight: bold; /* 見出しとしての強調 */
+  text-align: center; /* 中央揃え */
+}
+
+.about-table ul {
+  margin: 0;
+  padding-left: 1.2em;
+  list-style-type: disc; /* 箇条書きのスタイル */
+  text-align: left; /* リスト項目を左寄せ */
+}
+
+/* 説明文の背景色を統一 */
+.section-description {
+  background-color: #f9f9f9; /* 統一された薄いグレイの背景色 */
+  padding: 1em; /* 内側の余白 */
+  border-radius: 6px; /* 角を少し丸める */
+  margin-bottom: 1em; /* 下部の余白 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
+}
+
+/* 集会所セクションの説明文の上下マージンを完全に削除 */
+#hall .section-description {
+  margin: 0 !important; /* 上下のマージンを完全に削除 */
+  padding: 1em; /* 内側の余白を維持 */
+}
+
+/* section-description 内の <p> と <ul> のマージンをリセット */
+.section-description p,
+.section-description ul {
+  margin: 0; /* 上下の余計なマージンを削除 */
+}
+
+/* section-description 内の <ul> のインデントを調整 */
+.section-description ul {
+  margin: 0; /* 上下の余計なマージンを削除 */
+  padding-left: 1.5em; /* インデントを少し追加 */
+  list-style-type: disc; /* 箇条書きのスタイル */
+}
+
+.section-description li {
+  margin-bottom: 0.1em; /* リスト項目間の余白を調整 */
+}
+
+/* 集会所セクションの <ul> に特定のスタイルを適用 */
+.hall-list {
+  padding-left: 1.0em; /* インデントを追加 */
+}
+
+.hall-list ul {
+  list-style-type: disc; /* 箇条書きのスタイル */
+  margin: 0; /* 上下の余計なマージンを削除 */
+}
+
+.hall-list li {
+  margin-bottom: 0.1em; /* リスト項目間の余白を調整 */
+}
+
+/* リンクを中央揃えにする */
+.center-link {
+  text-align: center; /* 中央揃え */
+  margin: 0; /* 余計なマージンを削除 */
+}
+
+/* 更新情報セクションの下部余白を調整 */
+#updates {
+  margin-bottom: 0.1em; /* 下部余白を小さく設定 */
+}
+
+@media (max-width: 800px) {
+  .two-column {
+    flex-direction: column;
+  }
+  nav {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+}
+@media (max-width: 600px) {
+  main {
+    padding: 0.5em;
+  }
+  header, footer {
+    padding: 0.7em;
+  }
+  .hero-img {
+    max-width: 100%;
+  }
+  nav a {
+    display: inline-block; /* 横に並べる */
+    margin: 0 0.3em; /* 左右の余白を減らす */
+    font-size: 0.9em; /* フォントサイズをさらに小さくする */
+    white-space: nowrap; /* テキストの折り返しを防ぐ */
+  }
+  body {
+    margin: 0.5em;
+  }
+  h1 {
+    font-size: 1.2em;
+  }
+  .caption {
+    font-size: 0.9em;
+  }
+  .two-column {
+    flex-direction: column; /* 縦並びにする */
+    gap: 1em; /* 縦方向の余白を調整 */
+  }
+  .column {
+    flex: 1 1 auto; /* 高さを内容に応じて調整 */
+  }
+
+  #hall .two-column {
+    flex-wrap: nowrap; /* 折り返しを防ぐ */
+    flex-direction: row; /* 横並びを維持 */
+  }
+
+  #hall .column.description {
+    flex: 2; /* 左側を3分の2の幅に設定 */
+  }
+
+  #hall .column.image {
+    flex: 1; /* 右側を3分の1の幅に設定 */
+  }
+}
