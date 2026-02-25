@@ -26,7 +26,7 @@
 ```
 docs/                   # GitHub Pages 公開ルート
   index.html            # トップページ
-  community/            # 回覧・お知らせ類
+  circulars/            # 回覧・お知らせ類
     202602/             # 2026年2月分
     ...
   styles/               # CSS
