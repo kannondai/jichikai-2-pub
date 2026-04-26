@@ -8,3 +8,6 @@ __pycache__/
 
 # 環境変数
 .env
+
+# VS Code バージョン記録（ローカル環境依存）
+.github/vscode-version.txt
